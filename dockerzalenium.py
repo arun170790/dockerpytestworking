@@ -9,6 +9,7 @@ def test_meth1(name) :
     options = webdriver.ChromeOptions()
     driver = webdriver.Remote('http://192.168.1.5:4444/wd/hub', options.to_capabilities())
     driver.get("https://natgrid-mxtst03.maximo.com")
+    print('This is successful')
     driver.maximize_window()
     driver.find_element_by_xpath("//input[@id='username']").send_keys(name)
     driver.close()
